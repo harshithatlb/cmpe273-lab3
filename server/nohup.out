@@ -1,0 +1,115 @@
+INFO  [2015-04-21 06:51:29,568] edu.sjsu.cmpe.cache.CacheService: Loaded resources
+WARN  [2015-04-21 06:51:29,620] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2015-04-21 06:51:29,700] com.yammer.dropwizard.cli.ServerCommand: Starting cache-server
+INFO  [2015-04-21 06:51:29,702] org.eclipse.jetty.server.Server: jetty-8.y.z-SNAPSHOT
+INFO  [2015-04-21 06:51:29,940] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2015-04-21 06:51:30,040] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /cache/ (edu.sjsu.cmpe.cache.api.resources.CacheResource)
+    GET     /cache/{key} (edu.sjsu.cmpe.cache.api.resources.CacheResource)
+    PUT     /cache/{key}/{value} (edu.sjsu.cmpe.cache.api.resources.CacheResource)
+
+INFO  [2015-04-21 06:51:30,040] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2015-04-21 06:51:30,568] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:3000
+INFO  [2015-04-21 06:51:30,570] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:7000
+127.0.0.1 - - [21/Apr/2015:06:51:50 +0000] "GET /cache/ HTTP/1.1" 200 22 65 65
+127.0.0.1 - - [21/Apr/2015:06:51:51 +0000] "GET /favicon.ico HTTP/1.1" 200 0 1 1
+127.0.0.1 - - [21/Apr/2015:06:51:51 +0000] "GET /favicon.ico HTTP/1.1" 200 0 0 0
+INFO  [2015-04-21 06:53:30,310] edu.sjsu.cmpe.cache.CacheService: Loaded resources
+WARN  [2015-04-21 06:53:30,336] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2015-04-21 06:53:30,422] com.yammer.dropwizard.cli.ServerCommand: Starting cache-server
+INFO  [2015-04-21 06:53:30,424] org.eclipse.jetty.server.Server: jetty-8.y.z-SNAPSHOT
+INFO  [2015-04-21 06:53:30,650] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2015-04-21 06:53:30,727] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /cache/ (edu.sjsu.cmpe.cache.api.resources.CacheResource)
+    GET     /cache/{key} (edu.sjsu.cmpe.cache.api.resources.CacheResource)
+    PUT     /cache/{key}/{value} (edu.sjsu.cmpe.cache.api.resources.CacheResource)
+
+INFO  [2015-04-21 06:53:30,728] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2015-04-21 06:53:31,210] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:3001
+INFO  [2015-04-21 06:53:31,212] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:7001
+INFO  [2015-04-21 06:53:34,470] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:7001
+INFO  [2015-04-21 06:53:34,478] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:3001
+INFO  [2015-04-21 06:53:34,482] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2015-04-21 06:53:34,483] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2015-04-21 06:53:36,536] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+INFO  [2015-04-21 06:53:36,537] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+127.0.0.1 - - [21/Apr/2015:06:56:40 +0000] "PUT /cache/1/foo HTTP/1.1" 200 0 32 32
+127.0.0.1 - - [21/Apr/2015:06:56:40 +0000] "GET /cache/1 HTTP/1.1" 200 68 49 49
+127.0.0.1 - - [21/Apr/2015:06:56:56 +0000] "GET /cache/ HTTP/1.1" 200 70 3 3
+127.0.0.1 - - [21/Apr/2015:06:56:58 +0000] "GET /cache/ HTTP/1.1" 200 70 2 2
+127.0.0.1 - - [21/Apr/2015:06:57:15 +0000] "PUT /cache/1/foo HTTP/1.1" 200 0 1 1
+127.0.0.1 - - [21/Apr/2015:06:57:15 +0000] "GET /cache/1 HTTP/1.1" 200 68 2 2
+127.0.0.1 - - [21/Apr/2015:06:57:24 +0000] "GET /cache/ HTTP/1.1" 200 70 2 2
+127.0.0.1 - - [21/Apr/2015:06:57:25 +0000] "GET /cache/ HTTP/1.1" 200 70 2 2
+INFO  [2015-05-09 15:30:15,891] edu.sjsu.cmpe.cache.CacheService: Loaded resources
+WARN  [2015-05-09 15:30:15,984] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2015-05-09 15:30:16,122] com.yammer.dropwizard.cli.ServerCommand: Starting cache-server
+INFO  [2015-05-09 15:30:16,123] org.eclipse.jetty.server.Server: jetty-8.y.z-SNAPSHOT
+INFO  [2015-05-09 15:30:16,431] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2015-05-09 15:30:16,516] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /cache/ (edu.sjsu.cmpe.cache.api.resources.CacheResource)
+    GET     /cache/{key} (edu.sjsu.cmpe.cache.api.resources.CacheResource)
+    PUT     /cache/{key}/{value} (edu.sjsu.cmpe.cache.api.resources.CacheResource)
+
+INFO  [2015-05-09 15:30:16,516] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2015-05-09 15:30:17,021] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:3000
+INFO  [2015-05-09 15:30:17,023] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:7000
+127.0.0.1 - - [09/May/2015:15:30:33 +0000] "GET /cache/ HTTP/1.1" 200 22 90 90
+127.0.0.1 - - [09/May/2015:15:30:33 +0000] "GET /favicon.ico HTTP/1.1" 200 0 0 0
+127.0.0.1 - - [09/May/2015:15:30:33 +0000] "GET /favicon.ico HTTP/1.1" 200 0 1 1
+127.0.0.1 - - [09/May/2015:15:31:14 +0000] "PUT /cache/2/b HTTP/1.1" 200 0 43 43
+127.0.0.1 - - [09/May/2015:15:31:14 +0000] "PUT /cache/3/c HTTP/1.1" 200 0 2 2
+127.0.0.1 - - [09/May/2015:15:31:14 +0000] "GET /cache/2 HTTP/1.1" 200 67 41 41
+127.0.0.1 - - [09/May/2015:15:31:14 +0000] "GET /cache/3 HTTP/1.1" 200 67 10 10
+127.0.0.1 - - [09/May/2015:15:31:15 +0000] "PUT /cache/5/e HTTP/1.1" 200 0 1 1
+127.0.0.1 - - [09/May/2015:15:31:15 +0000] "GET /cache/5 HTTP/1.1" 200 67 1 1
+127.0.0.1 - - [09/May/2015:15:31:15 +0000] "GET /cache/2 HTTP/1.1" 200 67 3 3
+127.0.0.1 - - [09/May/2015:15:31:15 +0000] "GET /cache/3 HTTP/1.1" 200 67 2 2
+127.0.0.1 - - [09/May/2015:15:31:15 +0000] "GET /cache/5 HTTP/1.1" 200 67 2 2
+127.0.0.1 - - [09/May/2015:15:31:19 +0000] "GET /cache/ HTTP/1.1" 200 94 2 2
+127.0.0.1 - - [09/May/2015:15:31:24 +0000] "GET /cache/ HTTP/1.1" 200 94 2 2
+INFO  [2015-05-09 15:33:21,546] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:7000
+INFO  [2015-05-09 15:33:21,555] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:3000
+INFO  [2015-05-09 15:33:21,558] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2015-05-09 15:33:21,560] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2015-05-09 15:33:23,615] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+INFO  [2015-05-09 15:33:23,624] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
