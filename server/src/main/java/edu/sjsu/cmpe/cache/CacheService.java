@@ -21,11 +21,13 @@ import java.util.*;
 public class CacheService extends Service<CacheServiceConfiguration> {
 
     private final Logger log = LoggerFactory.getLogger(getClass());
-
+    private  static String args_= null;;
     public static void main(String[] args) throws Exception {
-        new CacheService().run(args);
+    	CacheService.args_=args[1];
+	CacheService cache = new CacheService();
+	cache.run(args);
+	
     }
-
     @Override
     public void initialize(Bootstrap<CacheServiceConfiguration> bootstrap) {
         bootstrap.setName("cache-server");
@@ -36,16 +38,19 @@ public class CacheService extends Service<CacheServiceConfiguration> {
             Environment environment) throws Exception {
         
 	/** Cache APIs */
-
+	//System.out.println(args[1]);
 
 	ChronicleMapBuilder<Long,Entry> builder;
 	String tmp="";
-	String pathname ="";
 	File file;
 	ChronicleMap<Long,Entry> map;
 	try{
-		 pathname = "/home/harsh/test/narnia.dat";
-		 file = new File(pathname);
+		tmp = args_.substring(7,15);
+		System.out.println("arguments"+tmp);
+		String dir = System.getProperty("java.io.tmpdir");
+		String path = dir+"/"+args_.substring(7,15);
+		System.out.println("path:"+path);
+		file = new File(path);
 		System.out.println("file created");
 		 builder = ChronicleMapBuilder.of(Long.class, Entry.class);
 
